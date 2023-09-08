@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>
+
+            const str = prompt("Enter ")
+
+
+            function checkPalindrome(str){
+                  let rev = "";
+                  for(let i = str.length-1; i >= 0; i--){
+                        rev = rev + str[i];
+                  }
+
+                  if(rev == str){
+                        document.write(`"${str}" is Palindrome.`);
+                  }else{
+                        document.write(`"${str}" is not Palindrome.`);
+                  }
+
+            }
+
+            checkPalindrome(str);
+      </script>
+</body>
+</html>

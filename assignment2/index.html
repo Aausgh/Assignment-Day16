@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <script>
+            const str = prompt("Enter a number");
+            const num = Number(str);
+
+
+            function checkPrime(num, message){
+                  let isPrime = true;
+                  for(let i = 2; i <= num / 2; i++){
+                        if (num % i === 0 ){
+                              isPrime = false;
+                              break;
+                        }
+                  }
+
+                  if(isPrime){
+                        document.write('The number ' + num + ' is ' + message + ' and is prime');
+                  }else{
+                        document.write('The number ' + num + ' is ' + message + ' and is not prime')
+                  }
+            }
+
+            function oddEven(num){
+                  if( num % 2 === 0){
+                        checkPrime(num, "even")
+                  }else{
+                        checkPrime(num, "odd")
+                  }
+            }
+
+            for(let j = 5; j <= num-5; j++){
+                  if(j % 5 === 0){
+                        oddEven(j);
+                  }
+            }
+      </script>
+</body>
+</html>
